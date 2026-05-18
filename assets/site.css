@@ -447,26 +447,7 @@ nav.menu a:hover, nav.menu a.is-active { border-color: var(--brown); color: var(
 .services-head { text-align: center; margin-bottom: clamp(40px, 7vw, 80px); }
 .services-head h2 { margin-top: 16px; margin-bottom: 16px; }
 .services-head .lead { max-width: 50ch; margin: 16px auto 0; }
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
-.services-grid .service-card:first-child { grid-column: span 2; padding: 56px 40px; }
-.services-grid .service-card:first-child h3 { font-size: 16px; letter-spacing: 0.14em; min-height: auto; }
-.services-grid .service-card:first-child .icon-wrap { width: 80px; height: 80px; }
-.services-grid .service-card:first-child .icon-wrap svg { width: 36px; height: 36px; }
-.services-grid .service-card:last-child { grid-column: span 4; padding: 48px 40px; display: grid; grid-template-columns: auto 1fr auto; gap: 32px; text-align: left; align-items: center; }
-.services-grid .service-card:last-child .icon-wrap { margin: 0; }
-.services-grid .service-card:last-child h3 { margin: 0; font-size: 15px; }
-.services-grid .service-card:last-child p { margin: 0; font-size: 14px; max-width: 50ch; }
-.services-grid .service-card:last-child .read { margin: 0; }
-@media (max-width: 1024px) {
-  .services-grid .service-card:first-child { grid-column: span 2; }
-  .services-grid .service-card:last-child { grid-column: span 2; grid-template-columns: 1fr; text-align: center; gap: 16px; padding: 40px 24px; }
-  .services-grid .service-card:last-child .icon-wrap { margin: 0 auto; }
-}
-@media (max-width: 720px) {
-  .services-grid .service-card:first-child { grid-column: span 1; padding: 40px 24px 32px; }
-  .services-grid .service-card:first-child .icon-wrap { width: 64px; height: 64px; }
-  .services-grid .service-card:last-child { grid-column: span 1; }
-}
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .service-card {
   background: var(--bg-warm);
   padding: 40px 24px 32px;
