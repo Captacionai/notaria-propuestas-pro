@@ -326,11 +326,36 @@ nav.menu a:hover, nav.menu a.is-active { border-color: var(--brown); color: var(
   align-items: center;
   justify-content: center;
 }
-.hero-visual::before { content: ''; position: absolute; inset: 24px; border: 1px solid rgba(61,66,80,0.15); pointer-events: none; }
+.hero-visual::before { content: ''; position: absolute; inset: 24px; border: 1px solid rgba(61,66,80,0.15); pointer-events: none; z-index: 3; }
 .hero-visual .logo-big { width: 60%; max-width: 320px; height: auto; position: relative; z-index: 2; }
 .hero-visual .stamp-foot { position: absolute; bottom: 48px; left: 0; right: 0; text-align: center; z-index: 2; }
 .hero-visual .stamp-foot .name { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--text-dark); margin-bottom: 6px; font-weight: 500; }
 .hero-visual .stamp-foot .role { font-family: var(--sans); font-size: 9px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--primary); font-weight: 500; }
+
+/* Hero variant con foto real */
+.hero-visual--photo { background: var(--bg-deep); }
+.hero-visual--photo .hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: 1;
+}
+.hero-visual--photo::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 38%;
+  background: linear-gradient(to top, rgba(245,241,232,0.92) 0%, rgba(245,241,232,0.6) 45%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-visual--photo .stamp-foot { bottom: 32px; z-index: 3; }
+@media (max-width: 720px) {
+  .hero-visual--photo .hero-photo { object-position: center 30%; }
+}
 
 /* ═══ TRUST BAND — 4 items en 1 línea, responsive ═══ */
 .trust-band { background: var(--bg-base); padding: 28px 0; border-bottom: 1px solid var(--rule); }
